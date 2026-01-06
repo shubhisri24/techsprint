@@ -1,0 +1,197 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0.05)
+    ),
+    url("monument.jpg") no-repeat center center / cover;
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  font-family: "Nunito", sans-serif;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: 14px;
+  margin-top: 16px;
+  padding: 10px 18px;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 80vw;
+}
+
+.navbar{
+    display: flex;
+    height: 67px;
+    font-family: "Nunito", sans-serif;
+}
+
+.navbar li{
+    list-style: none;
+    margin: 0 12px;
+}
+
+.topleft{
+ width: 50%;
+ height: 50vh;
+}
+
+.topleft h1 {
+  font-size: 2.6rem;
+  color: #2c2c2c;
+}
+
+.topleft p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #333;
+  max-width: 90%;
+}
+
+
+.topright{
+    width: 50%;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.topright img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+
+
+}
+
+
+.section1 {
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 20px;
+  padding: 30px;
+}
+
+
+.logo{
+   font-size: 1.3rem; 
+}
+
+.btn {
+  backdrop-filter: blur(6px);
+  background: rgba(222, 158, 54, 0.85);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: #2c2c2c;
+}
+
+
+.section2,
+.section3,
+.section4 {
+  margin-top: 60px;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+}
+
+.feature-wrapper {
+  gap: 30px;
+}
+
+.feature-card {
+  width: 50%;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 18px;
+}
+
+.feature-card h3 {
+  margin-bottom: 12px;
+}
+
+.micro-copy {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+
+.scan-demo {
+  margin-top: 30px;
+  height: 220px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+}
+
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.tech-card {
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 18px;
+}
+
+
+.impact-text {
+  max-width: 70%;
+  line-height: 1.7;
+}
+
+
+.footer {
+  margin: 60px 0 30px;
+  padding: 25px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+}
+
+.footer-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
