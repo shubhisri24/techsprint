@@ -47,7 +47,7 @@ font-weight: bolder;
 }
 
 .text-blue{
-    color: rgb(222, 158, 54);
+    color: rgba(11, 11, 12, 0.753);
 }
 
 .btn{
@@ -56,6 +56,6 @@ font-weight: bolder;
     border-radius: 6px;
     cursor: pointer;
     color: white;
-    background-color: rgb(222, 158, 54);
+    background-color: rgb(71, 59, 40);
     
 }

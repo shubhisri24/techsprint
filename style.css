@@ -1,5 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
 
 body {
   background: linear-gradient(
@@ -7,7 +9,7 @@ body {
       rgba(255, 255, 255, 0.15),
       rgba(255, 255, 255, 0.05)
     ),
-    url("monument.jpg") no-repeat center center / cover;
+    url("assets/monument.jpg") no-repeat center center / cover;
 
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
@@ -15,6 +17,9 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
+.heading{
+font-family: "merriweather";
+}
 header {
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);
@@ -160,19 +165,6 @@ header {
   opacity: 0.7;
 }
 
-
-.scan-demo {
-  margin-top: 30px;
-  height: 220px;
-  border-radius: 16px;
-  background: rgba(0, 0, 0, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-style: italic;
-}
-
-
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -245,4 +237,50 @@ header {
   .tech-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/*archives starts here*/
+.archives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.archive-card {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.archive-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.archive-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.archive-content h3 {
+  font-size: 1.3rem;
+  color: #2c2c2c;
+}
+
+.archive-content p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.archive-meta {
+  font-size: 0.85rem;
+  opacity: 0.7;
 }
