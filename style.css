@@ -46,6 +46,20 @@ header {
     margin: 0 12px;
 }
 
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar a:hover {
+  opacity: 0.7;
+}
+
+.navbar a:visited {
+  color: inherit;
+}
+
+
 .topleft{
  width: 50%;
  height: 50vh;
@@ -194,4 +208,41 @@ header {
   gap: 25px;
   font-size: 0.9rem;
   opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+
+  .container {
+    max-width: 92vw;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .section1 .flex,
+  .feature-wrapper {
+    flex-direction: column;
+  }
+
+  .topleft,
+  .topright,
+  .feature-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .topright {
+    margin-top: 20px;
+    height: 40vh;
+  }
+
+  .impact-text {
+    max-width: 100%;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
 }

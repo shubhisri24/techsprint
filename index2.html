@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delhi Monuments Map</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utils.css" />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      #map {
+        height: 600px;
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+      h1 {
+        text-align: center;
+        color: rgb(222, 158, 54);
+        font-weight: 800;
+      }
+
+      .map-wrapper {
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 20px;
+      }
+
+      .custom-popup .leaflet-popup-content-wrapper {
+        background: #2c3e50;
+        color: #fff;
+        border-radius: 8px;
+      }
+      .custom-popup .leaflet-popup-tip {
+        background: #2c3e50;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mx-auto">
+      <h1>Explore the Monuments of Delhi</h1>
+      <div id="map"></div>
+
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+      <script>
+        const map = L.map("map").setView([28.6139, 77.209], 12);
+
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          attribution: "&copy; OpenStreetMap contributors",
+        }).addTo(map);
+
+        const monuments = [
+          {
+            name: "Red Fort (Lal Qila)",
+            coords: [28.6562, 77.241],
+            description:
+              "Built by Shah Jahan in 1639, this UNESCO site served as the main residence of Mughal Emperors.",
+          },
+          {
+            name: "Qutub Minar",
+            coords: [28.5244, 77.1855],
+            description:
+              "A 73-meter tall victory tower built in 1193 by Qutab-ud-din Aibak.",
+          },
+          {
+            name: "Humayun's Tomb",
+            coords: [28.5933, 77.2507],
+            description:
+              "The first garden-tomb on the Indian subcontinent, built in 1570.",
+          },
+          {
+            name: "India Gate",
+            coords: [28.6129, 77.2295],
+            description:
+              "A war memorial dedicated to the soldiers of British India who died in WWI.",
+          },
+          {
+            name: "Jantar Mantar",
+            coords: [28.6271, 77.2166],
+            description:
+              "An equinoctial sundial and observatory built by Maharaja Jai Singh II.",
+          },
+          {
+            name: "Lotus Temple",
+            coords: [28.5535, 77.2588],
+            description:
+              "A Bahá'í House of Worship notable for its flowerlike shape.",
+          },
+          {
+            name: "Jama Masjid",
+            coords: [28.6507, 77.2334],
+            description:
+              "One of the largest mosques in India, built by Shah Jahan.",
+          },
+        ];
+
+        monuments.forEach((place) => {
+          const marker = L.marker(place.coords).addTo(map);
+
+          // Create a nice popup
+          marker.bindPopup(
+            `
+                <div style="min-width: 150px;">
+                    <h3 style="margin: 0 0 5px 0; color: #e67e22;">${place.name}</h3>
+                    <p style="font-size: 14px; margin: 0;">${place.description}</p>
+                </div>
+            `,
+            { className: "custom-popup" }
+          );
+        });
+      </script>
+    </div>
+  </body>
+</html>
