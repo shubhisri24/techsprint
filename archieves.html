@@ -12,6 +12,8 @@
   <body>
     <div class="container mx-auto">
       <section class="section2">
+        <button class="back-btn" onclick="goBack()">← Back</button>
+
         <h2 class="section-title">Archives</h2>
 
         <div class="archives-grid">
@@ -112,5 +114,13 @@
         </div>
       </section>
     </div>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+       document.getElementById("hamburger").onclick = function () {
+      document.getElementById("navMenu").classList.toggle("active");
+    };
+    </script>
   </body>
 </html>

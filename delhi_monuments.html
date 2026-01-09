@@ -45,10 +45,12 @@
       .custom-popup .leaflet-popup-tip {
         background: #2c3e50;
       }
+
     </style>
   </head>
   <body>
     <div class="container mx-auto">
+          <button class="back-btn" onclick="goBack()">← Back</button>
       <h1>Explore the Monuments of Delhi</h1>
       <div id="map"></div>
 
@@ -120,6 +122,9 @@
             { className: "custom-popup" }
           );
         });
+         function goBack() {
+    window.history.back();
+  }
       </script>
     </div>
   </body>
