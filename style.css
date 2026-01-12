@@ -3,9 +3,7 @@
 
 
 body {
-  background: linear-gradient(135deg,
-      rgba(255, 255, 255, 0.15),
-      rgba(255, 255, 255, 0.05)),
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05)),
     url("assets/monument.jpg") no-repeat center center / cover;
 
   backdrop-filter: blur(6px);
@@ -14,8 +12,10 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
-.heading {
-  font-family: "merriweather";
+.heading .section-title,
+.archive-content h3,
+.feature-card h3 {
+  font-family: "merriweather", serif;
 }
 
 header {
@@ -42,12 +42,18 @@ header {
 .navbar {
   display: flex;
   height: 67px;
-  font-family: "Nunito", sans-serif;
+  
 }
 
 .navbar li {
   list-style: none;
   margin: 0 12px;
+}
+
+.navbar li:hover {
+  opacity: 0.7;
+  transform: translateY(-4px);
+
 }
 
 .navbar a {
@@ -294,15 +300,21 @@ header {
   .tech-grid {
     grid-template-columns: 1fr;
   }
+
+  .archives-grid {
+    grid-template-columns: 1fr;
+  }
+
 }
+
 @media (max-width: 600px) {
 
-  
+
   body {
     overflow-x: hidden;
   }
 
-  
+
   nav {
     flex-direction: column;
     align-items: flex-start;
@@ -311,7 +323,7 @@ header {
     width: 100%;
   }
 
- 
+
   .navbar {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -331,17 +343,17 @@ header {
     grid-column: 1 / -1;
     display: flex;
     justify-content: flex-end;
-     
-      padding-right: 2px; 
+
+    padding-right: 2px;
   }
 
- 
- .navbar li:last-child .btn {
-  padding: 7px 18px;
-  line-height: 1.1;
-}
 
-  
+  .navbar li:last-child .btn {
+    padding: 7px 18px;
+    line-height: 1.1;
+  }
+
+
   .section1 .flex {
     flex-direction: column;
     gap: 20px;
@@ -366,14 +378,12 @@ header {
   }
 
   #map {
-  height: calc(100vh - 180px);
-  width: 100%;
-  border-radius: 20px; 
-  display: block;
-  object-fit: cover;
-  box-sizing: border-box; 
-}
+    height: calc(100vh - 180px);
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+    object-fit: cover;
+    box-sizing: border-box;
+  }
 
 }
-
-
