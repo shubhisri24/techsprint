@@ -262,6 +262,21 @@ header {
   color: #2c2c2c;
 }
 
+.clear-btn {
+    position: absolute;
+    top: 80px; /* Below the back button */
+    left: 20px;
+    z-index: 1000;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.clear-btn:hover { background: #c0392b; }
 .back-btn:hover {
   opacity: 0.8;
 }
@@ -375,15 +390,6 @@ header {
     height: auto;
     border-radius: 20px;
     display: block;
-  }
-
-  #map {
-    height: calc(100vh - 180px);
-    width: 100%;
-    border-radius: 20px;
-    display: block;
-    object-fit: cover;
-    box-sizing: border-box;
   }
 
 }
